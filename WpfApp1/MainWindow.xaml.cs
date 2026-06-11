@@ -22,10 +22,32 @@ namespace WpfApp1
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, EventArgs e)
         {
-            MajorDeck majorDeck = new MajorDeck();
-            Console.WriteLine(majorDeck.Cards);
+
+            if (radioMajor.IsChecked == true)
+            {
+                MajorDeck majorDeck = new MajorDeck();
+                majorDeck.FillDeck();
+
+                System.Diagnostics.Debug.WriteLine(majorDeck.PullCards(1)[0].name);
+            }
+            else if (radioMinor.IsChecked == true) 
+            {
+                MinorDeck minorDeck = new MinorDeck();
+                minorDeck.FillDeck();
+
+                System.Diagnostics.Debug.WriteLine(minorDeck.PullCards(1)[0].name);
+            }
+            else
+            {
+                FullDeck fullDeck = new FullDeck();
+                fullDeck.FillDeck();
+
+                System.Diagnostics.Debug.WriteLine(fullDeck.PullCards(1)[0].name);
+            }
         }
+
+        
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing.Text;
+using System.Windows.Navigation;
 
 public enum Arcana
 {
@@ -24,6 +25,8 @@ public class Card
 
 public class MajorDeck
 {
+    private static Random rand = new Random();
+
     public List<Card> Cards = new List<Card>();
     public void FillDeck() {
 		Cards.Add(new Card("The Fool", Arcana.Major));
@@ -49,10 +52,23 @@ public class MajorDeck
         Cards.Add(new Card("Judgement", Arcana.Major));
         Cards.Add(new Card("The World", Arcana.Major));
     }
+
+    public List<Card> PullCards(int Number)
+    {
+        List<Card> ChosenCards = new List<Card>();
+        for (int i = 0; i < Number; i++)
+        {
+            int r = rand.Next(Cards.Count);
+            ChosenCards.Add(Cards[r]);
+        }
+        return ChosenCards;
+    }
 }
 
 public class MinorDeck
 {
+    private static Random rand = new Random();
+
     private static string[] NumberNames = { "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten" };
     public List<Card> Cards = new List<Card>();
     public void FillDeck()
@@ -94,37 +110,69 @@ public class MinorDeck
                     }
                 }
 
-                string minorArcana = "";
+                string suitName = "";
 
                 switch (i)
                 {
                     case 0:
-                        minorArcana = "Wands";
+                        suitName = "Wands";
                         break;
                     case 1:
-                        minorArcana = "Cups";
+                        suitName = "Cups";
                         break;
                     case 2:
-                        minorArcana = "Swords";
+                        suitName = "Swords";
                         break;
                     case 3:
-                        minorArcana = "Pentacles";
+                        suitName = "Pentacles";
                         break;
 
                 }
 
-                Cards.Add(new Card(foundNum + " of " + minorArcana, Arcana.Minor));
+                Cards.Add(new Card(foundNum + " of " + suitName, Arcana.Minor));
             }
         }
+
+    }
+    public List<Card> PullCards(int Number)
+    {
+        List<Card> ChosenCards = new List<Card>();
+        for (int i = 0; i < Number; i++)
+        {
+            int r = rand.Next(Cards.Count);
+            ChosenCards.Add(Cards[r]);
+        }
+        return ChosenCards;
     }
 }
 
 public class FullDeck
 {
+    private static Random rand = new Random();
+
+
     public List<Card> Cards = new List<Card>();
 
-    MajorDeck majorDeck = new MajorDeck();
-    MinorDeck minorDeck = new MinorDeck();
+    private MajorDeck majorDeck = new MajorDeck();
+    private MinorDeck minorDeck = new MinorDeck();
 
-    majorDeck
+    public void FillDeck()
+    {
+        majorDeck.FillDeck();
+        minorDeck.FillDeck();
+
+        Cards.AddRange(majorDeck.Cards);
+        Cards.AddRange(minorDeck.Cards);
+    }
+
+    public List<Card> PullCards(int Number)
+    {
+        List<Card> ChosenCards = new List<Card>();
+        for (int i = 0; i < Number; i++)
+        {
+            int r = rand.Next(Cards.Count);
+            ChosenCards.Add(Cards[r]);
+        }
+        return ChosenCards;
+    }
 }
