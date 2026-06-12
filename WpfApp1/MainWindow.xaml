@@ -24,5 +24,14 @@
             <RadioButton Name="radioMinor">Minor Arcana</RadioButton>
             <RadioButton Name="radioFull">Full Deck</RadioButton>
         </StackPanel>
+
+        <ListBox Name="listBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="494,0,0,0">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            
+        </ListBox>
     </Grid>
 </Window>
