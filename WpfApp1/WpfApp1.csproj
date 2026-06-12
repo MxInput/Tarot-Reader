@@ -27,6 +27,7 @@
     <None Remove="images\Four of Pentacles.png" />
     <None Remove="images\Four of Swords.png" />
     <None Remove="images\Four of Wands.png" />
+    <None Remove="images\Judgement.png" />
     <None Remove="images\Judgment.png" />
     <None Remove="images\Justice.png" />
     <None Remove="images\King of Cups.png" />
@@ -109,7 +110,7 @@
     <Resource Include="images\Four of Pentacles.png" />
     <Resource Include="images\Four of Swords.png" />
     <Resource Include="images\Four of Wands.png" />
-    <Resource Include="images\Judgment.png" />
+    <Resource Include="images\Judgement.png" />
     <Resource Include="images\Justice.png" />
     <Resource Include="images\King of Cups.png" />
     <Resource Include="images\King of Pentacles.png" />

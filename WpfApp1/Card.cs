@@ -39,7 +39,7 @@ public class MajorDeck
         Cards.Add(new Card("The Chariot", Arcana.Major));
         Cards.Add(new Card("Strength", Arcana.Major));
         Cards.Add(new Card("The Hermit", Arcana.Major));
-        Cards.Add(new Card("The Wheel of Fortune", Arcana.Major));
+        Cards.Add(new Card("Wheel of Fortune", Arcana.Major));
         Cards.Add(new Card("Justice", Arcana.Major));
         Cards.Add(new Card("The Hanged Man", Arcana.Major));
         Cards.Add(new Card("Death", Arcana.Major));

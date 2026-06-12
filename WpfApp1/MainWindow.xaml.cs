@@ -24,6 +24,85 @@ namespace WpfApp1
             InitializeComponent();
         }
 
+        private int GetSelectedNumber()
+        {
+            int numToGenerate = 0;
+
+            if (radio1.IsChecked == true)
+            {
+                numToGenerate = 1;
+            }
+            else if (radio2.IsChecked == true)
+            {
+                numToGenerate = 2;
+            }
+            else if (radio3.IsChecked == true)
+            {
+                numToGenerate = 3;
+            }
+            else if (radio4.IsChecked == true)
+            {
+                numToGenerate = 4;
+            }
+            else if (radio5.IsChecked == true)
+            {
+                numToGenerate = 5;
+            }
+            else if (radio6.IsChecked == true)
+            {
+                numToGenerate = 6;
+            }
+            else if (radio7.IsChecked == true)
+            {
+                numToGenerate = 7;
+            }
+            else if (radio8.IsChecked == true)
+            {
+                numToGenerate = 8;
+            }
+            else if (radio9.IsChecked == true)
+            {
+                numToGenerate = 9;
+            }
+            else
+            {
+                numToGenerate = 10;
+            }
+            return numToGenerate;
+        }
+
+        private void Show_Cards(int Number, List<Card> ChosenCards)
+        {
+            switch (Number)
+            {
+                case 1:
+                    oneListBox.Visibility = Visibility.Visible;
+
+                    String imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[0].name + ".png";
+
+                    oneListBox.Source = new BitmapImage(new Uri(imagePathName));
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                case 10:
+                    break;
+            }
+        }
+
         private void Button_Click(object sender, EventArgs e)
         {
 
@@ -32,23 +111,10 @@ namespace WpfApp1
                 MajorDeck majorDeck = new MajorDeck();
                 majorDeck.FillDeck();
 
-                String imagePathName = "pack://application:,,,/WpfApp1;component/images/" + majorDeck.PullCards(1)[0].name + ".png";
-                
-                Image img = new Image();
+                int selectedNum = GetSelectedNumber();
+                List<Card> generatedCards = majorDeck.PullCards(selectedNum);
 
-                System.Diagnostics.Debug.WriteLine(listBox.Items.Count, majorDeck.PullCards(1)[0].name);
-                BitmapImage bitmapImage = new BitmapImage();
-                bitmapImage.UriSource = new Uri(imagePathName);
-
-                img.Source = bitmapImage;
-
-
-                listBox.Items.Clear();
-
-                listBox.Items.Add(img);
-                
-
-
+                Show_Cards(selectedNum, generatedCards);
             }
             else if (radioMinor.IsChecked == true) 
             {
