@@ -71,8 +71,24 @@ namespace WpfApp1
             return numToGenerate;
         }
 
+        private void Hide_Menus()
+        {
+            oneListBox.Visibility = Visibility.Collapsed;
+            twoListBox.Visibility = Visibility.Collapsed;
+            threeListBox.Visibility = Visibility.Collapsed;
+            fourListBox.Visibility = Visibility.Collapsed;
+            fiveListBox.Visibility = Visibility.Collapsed;
+            sixListBox.Visibility = Visibility.Collapsed;
+            sevenListBox.Visibility = Visibility.Collapsed;
+            eightListBox.Visibility = Visibility.Collapsed;
+            nineListBox.Visibility = Visibility.Collapsed;
+            tenListBox.Visibility = Visibility.Collapsed;
+        }
+
         private void Show_Cards(int Number, List<Card> ChosenCards)
         {
+            Hide_Menus();
+
             switch (Number)
             {
                 case 1:
@@ -83,22 +99,193 @@ namespace WpfApp1
                     oneListBox.Source = new BitmapImage(new Uri(imagePathName));
                     break;
                 case 2:
+                    twoListBox.Visibility = Visibility.Visible;
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[0].name + ".png";
+                    Two_One.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[1].name + ".png";
+                    Two_Two.Source = new BitmapImage(new Uri(imagePathName));
                     break;
                 case 3:
+                    threeListBox.Visibility = Visibility.Visible;
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[0].name + ".png";
+                    Three_One.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[1].name + ".png";
+                    Three_Two.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[2].name + ".png";
+                    Three_Three.Source = new BitmapImage(new Uri(imagePathName));
                     break;
                 case 4:
+                    fourListBox.Visibility = Visibility.Visible;
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[0].name + ".png";
+                    Four_One.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[1].name + ".png";
+                    Four_Two.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[2].name + ".png";
+                    Four_Three.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[3].name + ".png";
+                    Four_Four.Source = new BitmapImage(new Uri(imagePathName));
                     break;
                 case 5:
+                    fiveListBox.Visibility = Visibility.Visible;
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[0].name + ".png";
+                    Five_One.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[1].name + ".png";
+                    Five_Two.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[2].name + ".png";
+                    Five_Three.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[3].name + ".png";
+                    Five_Four.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[4].name + ".png";
+                    Five_Five.Source = new BitmapImage(new Uri(imagePathName));
                     break;
                 case 6:
+                    sixListBox.Visibility = Visibility.Visible;
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[0].name + ".png";
+                    Six_One.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[1].name + ".png";
+                    Six_Two.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[2].name + ".png";
+                    Six_Three.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[3].name + ".png";
+                    Six_Four.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[4].name + ".png";
+                    Six_Five.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[5].name + ".png";
+                    Six_Six.Source = new BitmapImage(new Uri(imagePathName));
                     break;
                 case 7:
+                    sevenListBox.Visibility = Visibility.Visible;
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[0].name + ".png";
+                    Seven_One.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[1].name + ".png";
+                    Seven_Two.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[2].name + ".png";
+                    Seven_Three.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[3].name + ".png";
+                    Seven_Four.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[4].name + ".png";
+                    Seven_Five.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[5].name + ".png";
+                    Seven_Six.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[6].name + ".png";
+                    Seven_Seven.Source = new BitmapImage(new Uri(imagePathName));
                     break;
                 case 8:
+                    eightListBox.Visibility = Visibility.Visible;
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[0].name + ".png";
+                    Eight_One.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[1].name + ".png";
+                    Eight_Two.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[2].name + ".png";
+                    Eight_Three.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[3].name + ".png";
+                    Eight_Four.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[4].name + ".png";
+                    Eight_Five.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[5].name + ".png";
+                    Eight_Six.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[6].name + ".png";
+                    Eight_Seven.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[7].name + ".png";
+                    Eight_Eight.Source = new BitmapImage(new Uri(imagePathName));
                     break;
                 case 9:
+                    nineListBox.Visibility = Visibility.Visible;
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[0].name + ".png";
+                    Nine_One.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[1].name + ".png";
+                    Nine_Two.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[2].name + ".png";
+                    Nine_Three.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[3].name + ".png";
+                    Nine_Four.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[4].name + ".png";
+                    Nine_Five.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[5].name + ".png";
+                    Nine_Six.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[6].name + ".png";
+                    Nine_Seven.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[7].name + ".png";
+                    Nine_Eight.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[8].name + ".png";
+                    Nine_Nine.Source = new BitmapImage(new Uri(imagePathName));
                     break;
                 case 10:
+                    tenListBox.Visibility = Visibility.Visible;
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[0].name + ".png";
+                    Ten_One.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[1].name + ".png";
+                    Ten_Two.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[2].name + ".png";
+                    Ten_Three.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[3].name + ".png";
+                    Ten_Four.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[4].name + ".png";
+                    Ten_Five.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[5].name + ".png";
+                    Ten_Six.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[6].name + ".png";
+                    Ten_Seven.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[7].name + ".png";
+                    Ten_Eight.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[8].name + ".png";
+                    Ten_Nine.Source = new BitmapImage(new Uri(imagePathName));
+
+                    imagePathName = "pack://application:,,,/WpfApp1;component/images/" + ChosenCards[9].name + ".png";
+                    Ten_Ten.Source = new BitmapImage(new Uri(imagePathName));
                     break;
             }
         }
@@ -121,14 +308,20 @@ namespace WpfApp1
                 MinorDeck minorDeck = new MinorDeck();
                 minorDeck.FillDeck();
 
-                System.Diagnostics.Debug.WriteLine(minorDeck.PullCards(1)[0].name);
+                int selectedNum = GetSelectedNumber();
+                List<Card> generatedCards = minorDeck.PullCards(selectedNum);
+
+                Show_Cards(selectedNum, generatedCards);
             }
             else
             {
                 FullDeck fullDeck = new FullDeck();
                 fullDeck.FillDeck();
 
-                System.Diagnostics.Debug.WriteLine(fullDeck.PullCards(1)[0].name);
+                int selectedNum = GetSelectedNumber();
+                List<Card> generatedCards = fullDeck.PullCards(selectedNum);
+
+                Show_Cards(selectedNum, generatedCards);
             }
         }
 

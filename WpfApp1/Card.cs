@@ -56,11 +56,14 @@ public class MajorDeck
     public List<Card> PullCards(int Number)
     {
         List<Card> ChosenCards = new List<Card>();
-        for (int i = 0; i < Number; i++)
+
+        List<int> GeneratedNumbers = Enumerable.Range(0, Cards.Count-1).Shuffle().Take(Number).ToList();
+
+        foreach (int GeneratedNumber in GeneratedNumbers)
         {
-            int r = rand.Next(Cards.Count);
-            ChosenCards.Add(Cards[r]);
+            ChosenCards.Add(Cards[GeneratedNumber]);
         }
+
         return ChosenCards;
     }
 }
@@ -137,11 +140,14 @@ public class MinorDeck
     public List<Card> PullCards(int Number)
     {
         List<Card> ChosenCards = new List<Card>();
-        for (int i = 0; i < Number; i++)
+
+        List<int> GeneratedNumbers = Enumerable.Range(0, Cards.Count - 1).Shuffle().Take(Number).ToList();
+
+        foreach (int GeneratedNumber in GeneratedNumbers)
         {
-            int r = rand.Next(Cards.Count);
-            ChosenCards.Add(Cards[r]);
+            ChosenCards.Add(Cards[GeneratedNumber]);
         }
+
         return ChosenCards;
     }
 }
@@ -168,11 +174,14 @@ public class FullDeck
     public List<Card> PullCards(int Number)
     {
         List<Card> ChosenCards = new List<Card>();
-        for (int i = 0; i < Number; i++)
+
+        List<int> GeneratedNumbers = Enumerable.Range(0, Cards.Count - 1).Shuffle().Take(Number).ToList();
+
+        foreach (int GeneratedNumber in GeneratedNumbers)
         {
-            int r = rand.Next(Cards.Count);
-            ChosenCards.Add(Cards[r]);
+            ChosenCards.Add(Cards[GeneratedNumber]);
         }
+
         return ChosenCards;
     }
 }
