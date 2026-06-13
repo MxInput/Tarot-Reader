@@ -92,6 +92,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.4.11" />
     <PackageReference Include="MaterialDesignThemes" Version="5.3.2" />
   </ItemGroup>
 

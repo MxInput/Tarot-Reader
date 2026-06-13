@@ -27,7 +27,10 @@ namespace WpfApp1
 
         protected override void OnClosed(EventArgs e)
         {
-            ((MainWindow)Application.Current.MainWindow).SavesOpen = false;
+            if (((MainWindow)Application.Current.MainWindow) != null)
+            {
+                ((MainWindow)Application.Current.MainWindow).SavesOpen = false;
+            }
         }
 
         private void ConvertSavedData()
@@ -54,17 +57,25 @@ namespace WpfApp1
                 foreach (SaveEntry foundEntry in loadedEntries)
                 {
                     string currentCardName = "";
+                    int count = 0;
 
                     foreach (Card foundCard in foundEntry.cards)
                     {
+                        string reversedStatus = "Reversed";
+                        if (!foundEntry.reversals[count])
+                        {
+                            reversedStatus = "Normal";
+                        }
+
                         if (currentCardName == "")
                         {
-                            currentCardName += foundCard.name;
+                            currentCardName += foundCard.name + " - " + reversedStatus;
                         }
                         else
                         {
-                            currentCardName += ", " + foundCard.name;
+                            currentCardName += ", " + foundCard.name + " - " + reversedStatus;
                         }
+                        count++;
                     }
                     DisplayEntry displayEntry = new DisplayEntry(currentCardName, foundEntry.dateTime, foundEntry.label);
                     displayCards.Add(displayEntry);

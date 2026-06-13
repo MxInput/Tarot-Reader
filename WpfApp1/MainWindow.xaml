@@ -80,7 +80,7 @@
             </StackPanel>
         </ScrollViewer>
 
-        <Image Visibility="Collapsed" Name="oneListBox" Source ="/images/Ace of Cups.png" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1"/>
+        <Image RenderTransformOrigin="0.5, 0.5" Visibility="Collapsed" Name="oneListBox" Source ="/images/Ace of Cups.png" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1"/>
 
 
         <ListBox Background="Transparent" Visibility="Collapsed" Name="twoListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
@@ -91,8 +91,8 @@
             </ListBox.ItemsPanel>
 
 
-            <Image Name="Two_One" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Two_Two" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Two_One" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Two_Two" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
         <ListBox Background="Transparent" Visibility="Collapsed" Name="threeListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
@@ -102,9 +102,9 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 
-            <Image Name="Three_One" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Three_Two" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Three_Three" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Three_One" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Three_Two" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Three_Three" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
         <ListBox Background="Transparent" Visibility="Collapsed" Name="fourListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
@@ -114,10 +114,10 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 
-            <Image Name="Four_One" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Four_Two" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Four_Three" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Four_Four" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Four_One" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Four_Two" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Four_Three" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Four_Four" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
         <ListBox Background="Transparent" Visibility="Collapsed" Name="fiveListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
@@ -127,11 +127,11 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 
-            <Image Name="Five_One" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Five_Two" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Five_Three" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Five_Four" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Five_Five" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Five_One" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Five_Two" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Five_Three" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Five_Four" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Five_Five" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
 
@@ -142,12 +142,12 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 
-            <Image Name="Six_One" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Six_Two" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Six_Three" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Six_Four" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Six_Five" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Six_Six" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Six_One" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Six_Two" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Six_Three" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Six_Four" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Six_Five" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Six_Six" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
         <ListBox Background="Transparent" Visibility="Collapsed" Name="sevenListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
@@ -157,13 +157,13 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 
-            <Image Name="Seven_One" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Seven_Two" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Seven_Three" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Seven_Four" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Seven_Five" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Seven_Six" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Seven_Seven" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Seven_One" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Seven_Two" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Seven_Three" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Seven_Four" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Seven_Five" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Seven_Six" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Seven_Seven" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
         <ListBox Background="Transparent" Visibility="Collapsed" Name="eightListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
@@ -173,14 +173,14 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 
-            <Image Name="Eight_One" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Eight_Two" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Eight_Three" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Eight_Four" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Eight_Five" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Eight_Six" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Eight_Seven" Source ="/images/Ace of Cups.png"/>
-            <Image Name="Eight_Eight" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Eight_One" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Eight_Two" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Eight_Three" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Eight_Four" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Eight_Five" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Eight_Six" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Eight_Seven" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" Name="Eight_Eight" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
         <ListBox Background="Transparent" Visibility="Collapsed" Name="nineListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
@@ -190,17 +190,17 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 
-            <Image MaxWidth="200" Name="Nine_One" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Nine_Two" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Nine_Three" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Nine_One" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Nine_Two" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Nine_Three" Source ="/images/Ace of Cups.png"/>
 
-            <Image MaxWidth="200" Name="Nine_Four" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Nine_Five" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Nine_Six" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Nine_Four" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Nine_Five" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Nine_Six" Source ="/images/Ace of Cups.png"/>
 
-            <Image MaxWidth="200" Name="Nine_Seven" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Nine_Eight" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Nine_Nine" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Nine_Seven" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Nine_Eight" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Nine_Nine" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
         <ListBox Background="Transparent" Visibility="Collapsed" Name="tenListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
@@ -210,19 +210,19 @@
                 </ItemsPanelTemplate>
             </ListBox.ItemsPanel>
 
-            <Image MaxWidth="200" Name="Ten_One" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Ten_Two" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Ten_Three" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Ten_One" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Ten_Two" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Ten_Three" Source ="/images/Ace of Cups.png"/>
 
-            <Image MaxWidth="200" Name="Ten_Four" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Ten_Five" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Ten_Six" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Ten_Four" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Ten_Five" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Ten_Six" Source ="/images/Ace of Cups.png"/>
 
-            <Image MaxWidth="200" Name="Ten_Seven" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Ten_Eight" Source ="/images/Ace of Cups.png"/>
-            <Image MaxWidth="200" Name="Ten_Nine" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Ten_Seven" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Ten_Eight" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Ten_Nine" Source ="/images/Ace of Cups.png"/>
 
-            <Image MaxWidth="200" Name="Ten_Ten" Source ="/images/Ace of Cups.png"/>
+            <Image RenderTransformOrigin="0.5, 0.5" MaxWidth="200" Name="Ten_Ten" Source ="/images/Ace of Cups.png"/>
         </ListBox>
     </Grid>
 </Window>
