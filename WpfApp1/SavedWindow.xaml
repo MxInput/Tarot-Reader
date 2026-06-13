@@ -8,6 +8,25 @@
         Style="{StaticResource MaterialDesignWindow}"
         Title="Saves" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.15*"/>
+            <RowDefinition Height="0.85*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Background="#00000000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" FontFamily="Tahoma" FontWeight="Bold">Saved Readings</Label>
+        <ListView Grid.Row="1" Name="SavedCards">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <TextBlock Text="Date: " />
+                        <TextBlock Text="{Binding dateTime}" FontWeight="Bold" />
+                        <TextBlock Text=", Pulled Cards: " />
+                        <TextBlock Text="{Binding cardNames}" FontWeight="Bold" />
+                        <TextBlock Text=", Label: " />
+                        <TextBlock Text="{Binding label}" FontWeight="Bold" />
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Window>

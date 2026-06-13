@@ -13,6 +13,7 @@ using System.IO;
 using System.Windows.Shapes;
 using Image = System.Windows.Controls.Image;
 using Path = System.IO.Path;
+using Microsoft.VisualBasic;
 
 namespace WpfApp1
 {
@@ -24,6 +25,7 @@ namespace WpfApp1
         protected static bool savesOpen = false;
         protected bool alreadySaved = false;
         protected List<Card> currentCards = new List<Card>();
+        protected List<bool> reversals = new List<bool>();
 
         public bool SavesOpen
         { 
@@ -109,6 +111,23 @@ namespace WpfApp1
         {
             alreadySaved = false;
             Hide_Menus();
+
+            Random rand = new Random();
+
+            if (ReversalsInclusion.IsChecked == true)
+            {
+                for (int i = 0; i < ChosenCards.Count; i++)
+                {
+                    reversals.Add(true);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < ChosenCards.Count; i++)
+                {
+                    reversals.Add(true);
+                }
+            }
 
             switch (Number)
             {
@@ -377,7 +396,9 @@ namespace WpfApp1
 
                 string filePath = Path.Combine(appFolderPath, "cards.json");
 
-                SaveEntry newEntry = new SaveEntry(currentCards, DateTime.Now);
+                string input = Interaction.InputBox("Enter Label for Reading", "Reading Title", "General Drawing");
+
+                SaveEntry newEntry = new SaveEntry(currentCards, DateTime.Now, input);
 
                 if (!File.Exists(filePath) || new FileInfo(filePath).Length == 0)
                 {

@@ -45,6 +45,33 @@ namespace WpfApp1
 
             string jsonString = File.ReadAllText(filePath);
 
+            var loadedEntries = System.Text.Json.JsonSerializer.Deserialize<List<SaveEntry>>(jsonString);
+
+            List<DisplayEntry> displayCards = new List<DisplayEntry>();
+
+            if (loadedEntries != null) 
+            {
+                foreach (SaveEntry foundEntry in loadedEntries)
+                {
+                    string currentCardName = "";
+
+                    foreach (Card foundCard in foundEntry.cards)
+                    {
+                        if (currentCardName == "")
+                        {
+                            currentCardName += foundCard.name;
+                        }
+                        else
+                        {
+                            currentCardName += ", " + foundCard.name;
+                        }
+                    }
+                    DisplayEntry displayEntry = new DisplayEntry(currentCardName, foundEntry.dateTime, foundEntry.label);
+                    displayCards.Add(displayEntry);
+                }
+
+                SavedCards.ItemsSource = displayCards;
+            }
         }
     }
 }
