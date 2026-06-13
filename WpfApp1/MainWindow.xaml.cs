@@ -19,6 +19,22 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        protected static bool savesOpen = false;
+
+        public bool SavesOpen
+        { 
+            get
+            {
+                return savesOpen;
+            }
+            set
+            {
+                savesOpen = value;
+            }
+        }
+
+        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -325,6 +341,21 @@ namespace WpfApp1
             }
         }
 
+        private void Open_Saves(object sender, EventArgs e)
+        {
+            if (!SavesOpen)
+            {
+                SavedWindow savedWindow = new SavedWindow();
+                savedWindow.Show();
+
+                SavesOpen = true;
+            }
+        }
+
         
+        private void Save_Pull()
+        {
+
+        }
     }
 }

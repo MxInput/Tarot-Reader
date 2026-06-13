@@ -10,10 +10,11 @@
 
     <Grid Background="#FFC4AAF0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.75*"/>
+            <RowDefinition Height="0.45*"/>
             <RowDefinition Height="0.25*"/>
             <RowDefinition Height="0.25*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.25*"/>
+            <RowDefinition Height="1.25*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="33*"/>
@@ -22,13 +23,21 @@
         </Grid.ColumnDefinitions>
 
 
-        <Label Background="Transparent" Grid.ColumnSpan="3" Grid.Row="0" HorizontalAlignment="Center" FontFamily="Sitka Subheading" FontSize="36" Foreground="White" Height="48" VerticalAlignment="Center">What does the future hold?</Label>
+        <Label Background="Transparent" Grid.ColumnSpan="3" Grid.Row="0" HorizontalAlignment="Center" FontFamily="Sitka Subheading" FontSize="40" Foreground="White" Height="48" VerticalAlignment="Center">
+            <Label.Effect>
+                <DropShadowEffect
+                  ShadowDepth="4"
+                  Direction="330"
+                  Color="Black"
+                  Opacity="0.5"
+                 BlurRadius="4"/>
+            </Label.Effect>
+            What does the future hold?
+        </Label>
 
         <Button Foreground="White" Background="#FF2E5F6E" Grid.Row="1" Grid.ColumnSpan="1" Click="Button_Click" FontFamily="SimSun" FontSize="36" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0" >Generate</Button>
         <Button Foreground="White" Background="#FF2E5F6E" Grid.Row="2" Grid.ColumnSpan="1" FontFamily="SimSun" FontSize="36" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0">Save</Button>
-
-
-
+        <Button Foreground="White" Background="#FF2E5F6E" Grid.Row="3" Grid.ColumnSpan="1" Click="Open_Saves" FontFamily="SimSun" FontSize="22" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0">View Previous</Button>
 
         <StackPanel Grid.Row="4" Grid.Column="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalAlignment="Top" HorizontalAlignment="Center">
             <StackPanel.RenderTransform>
@@ -48,7 +57,7 @@
             <RadioButton Name="radioFull">Full Deck</RadioButton>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+        <StackPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled">
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -74,10 +83,10 @@
 
 
 
-        <Image Visibility="Collapsed" Name="oneListBox" Source ="/images/Ace of Cups.png" Grid.Column="3" Grid.RowSpan="3" Grid.Row="1"/>
+        <Image Visibility="Collapsed" Name="oneListBox" Source ="/images/Ace of Cups.png" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1"/>
 
 
-        <ListBox Background="Transparent" Visibility="Collapsed" Name="twoListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="3" Grid.Row="1">
+        <ListBox Background="Transparent" Visibility="Collapsed" Name="twoListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid/>
@@ -89,7 +98,7 @@
             <Image Name="Two_Two" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
-        <ListBox Background="Transparent" Visibility="Collapsed" Name="threeListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="3" Grid.Row="1">
+        <ListBox Background="Transparent" Visibility="Collapsed" Name="threeListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid/>
@@ -101,7 +110,7 @@
             <Image Name="Three_Three" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
-        <ListBox Background="Transparent" Visibility="Collapsed" Name="fourListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="3" Grid.Row="1">
+        <ListBox Background="Transparent" Visibility="Collapsed" Name="fourListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid/>
@@ -114,7 +123,7 @@
             <Image Name="Four_Four" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
-        <ListBox Background="Transparent" Visibility="Collapsed" Name="fiveListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="3" Grid.Row="1">
+        <ListBox Background="Transparent" Visibility="Collapsed" Name="fiveListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid/>
@@ -129,7 +138,7 @@
         </ListBox>
 
 
-        <ListBox Background="Transparent" Visibility="Collapsed" Name="sixListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="3" Grid.Row="1">
+        <ListBox Background="Transparent" Visibility="Collapsed" Name="sixListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid/>
@@ -144,7 +153,7 @@
             <Image Name="Six_Six" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
-        <ListBox Background="Transparent" Visibility="Collapsed" Name="sevenListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="3" Grid.Row="1">
+        <ListBox Background="Transparent" Visibility="Collapsed" Name="sevenListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid/>
@@ -160,7 +169,7 @@
             <Image Name="Seven_Seven" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
-        <ListBox Background="Transparent" Visibility="Collapsed" Name="eightListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="3" Grid.Row="1">
+        <ListBox Background="Transparent" Visibility="Collapsed" Name="eightListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid/>
@@ -177,7 +186,7 @@
             <Image Name="Eight_Eight" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
-        <ListBox Background="Transparent" Visibility="Collapsed" Name="nineListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="3" Grid.Row="1">
+        <ListBox Background="Transparent" Visibility="Collapsed" Name="nineListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid/>
@@ -197,7 +206,7 @@
             <Image MaxWidth="200" Name="Nine_Nine" Source ="/images/Ace of Cups.png"/>
         </ListBox>
 
-        <ListBox Background="Transparent" Visibility="Collapsed" Name="tenListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="3" Grid.Row="1">
+        <ListBox Background="Transparent" Visibility="Collapsed" Name="tenListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Disabled" Grid.Column="3" Grid.RowSpan="4" Grid.Row="1">
             <ListBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid/>

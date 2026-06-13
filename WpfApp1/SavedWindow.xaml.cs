@@ -15,11 +15,16 @@ namespace WpfApp1
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class SavedWindow : Window
     {
-        public Window1()
+        public SavedWindow()
         {
             InitializeComponent();
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            ((MainWindow)Application.Current.MainWindow).SavesOpen = false;
         }
     }
 }
