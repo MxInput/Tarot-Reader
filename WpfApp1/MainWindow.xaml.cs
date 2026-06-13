@@ -9,8 +9,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
+using System.IO;
 using System.Windows.Shapes;
 using Image = System.Windows.Controls.Image;
+using Path = System.IO.Path;
 
 namespace WpfApp1
 {
@@ -20,6 +22,8 @@ namespace WpfApp1
     public partial class MainWindow : Window
     {
         protected static bool savesOpen = false;
+        protected bool alreadySaved = false;
+        protected List<Card> currentCards = new List<Card>();
 
         public bool SavesOpen
         { 
@@ -103,6 +107,7 @@ namespace WpfApp1
 
         private void Show_Cards(int Number, List<Card> ChosenCards)
         {
+            alreadySaved = false;
             Hide_Menus();
 
             switch (Number)
@@ -318,6 +323,7 @@ namespace WpfApp1
                 List<Card> generatedCards = majorDeck.PullCards(selectedNum);
 
                 Show_Cards(selectedNum, generatedCards);
+                currentCards = generatedCards;
             }
             else if (radioMinor.IsChecked == true) 
             {
@@ -328,6 +334,7 @@ namespace WpfApp1
                 List<Card> generatedCards = minorDeck.PullCards(selectedNum);
 
                 Show_Cards(selectedNum, generatedCards);
+                currentCards = generatedCards;
             }
             else
             {
@@ -338,6 +345,7 @@ namespace WpfApp1
                 List<Card> generatedCards = fullDeck.PullCards(selectedNum);
 
                 Show_Cards(selectedNum, generatedCards);
+                currentCards = generatedCards;
             }
         }
 
@@ -352,10 +360,50 @@ namespace WpfApp1
             }
         }
 
-        
-        private void Save_Pull()
-        {
 
+        private void Save_Pull(object sender, EventArgs e)
+        {
+            if (currentCards.Any() && !alreadySaved)
+            {
+                alreadySaved = true;
+                string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+                string appFolderPath = Path.Combine(appDataPath, "Simple Tarot Reader");
+
+                if (!Directory.Exists(appFolderPath))
+                {
+                    Directory.CreateDirectory(appFolderPath);
+                }
+
+                string filePath = Path.Combine(appFolderPath, "cards.json");
+
+                SaveEntry newEntry = new SaveEntry(currentCards, DateTime.Now);
+
+                if (!File.Exists(filePath) || new FileInfo(filePath).Length == 0)
+                {
+                    List<SaveEntry> entryList = new List<SaveEntry>();
+                    entryList.Add(newEntry);
+
+                    string jsonString = System.Text.Json.JsonSerializer.Serialize(entryList, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+                    File.WriteAllText(filePath, jsonString);
+                }
+                else
+                {
+                    string jsonString = File.ReadAllText(filePath);
+                    var loadedEntries = System.Text.Json.JsonSerializer.Deserialize<List<SaveEntry>>(jsonString);
+
+                    loadedEntries.Add(newEntry);
+
+                    string newJsonString = System.Text.Json.JsonSerializer.Serialize(loadedEntries, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
+                    File.WriteAllText(filePath, newJsonString);
+                }
+                
+                MessageBox.Show("Saved.");
+            }
+            else if (alreadySaved)
+            {
+                MessageBox.Show("Already Saved.");
+            }
         }
     }
 }

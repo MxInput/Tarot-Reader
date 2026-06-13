@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
+        Style="{StaticResource MaterialDesignWindow}"
         Title="Tarot Reader" Height="450" Width="800">
 
 
@@ -14,7 +15,7 @@
             <RowDefinition Height="0.25*"/>
             <RowDefinition Height="0.25*"/>
             <RowDefinition Height="0.25*"/>
-            <RowDefinition Height="1.25*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="33*"/>
@@ -35,9 +36,9 @@
             What does the future hold?
         </Label>
 
-        <Button Foreground="White" Background="#FF2E5F6E" Grid.Row="1" Grid.ColumnSpan="1" Click="Button_Click" FontFamily="SimSun" FontSize="36" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0" >Generate</Button>
-        <Button Foreground="White" Background="#FF2E5F6E" Grid.Row="2" Grid.ColumnSpan="1" FontFamily="SimSun" FontSize="36" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0">Save</Button>
-        <Button Foreground="White" Background="#FF2E5F6E" Grid.Row="3" Grid.ColumnSpan="1" Click="Open_Saves" FontFamily="SimSun" FontSize="22" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0">View Previous</Button>
+        <Button Foreground="White" Background="#FF2E5F6E" Grid.Row="1" Grid.ColumnSpan="1" Click="Button_Click" FontFamily="SimSun" FontSize="24" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0" >Generate</Button>
+        <Button Foreground="White" Name="SaveBtn" Background="#FF2E5F6E" Grid.Row="2" Grid.ColumnSpan="1" Click="Save_Pull" FontFamily="SimSun" FontSize="24" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0">Save</Button>
+        <Button Foreground="White" Background="#FF2E5F6E" Grid.Row="3" Grid.ColumnSpan="1" Click="Open_Saves" FontFamily="SimSun" FontSize="18" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0">View Previous</Button>
 
         <StackPanel Grid.Row="4" Grid.Column="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalAlignment="Top" HorizontalAlignment="Center">
             <StackPanel.RenderTransform>
@@ -57,28 +58,22 @@
             <RadioButton Name="radioFull">Full Deck</RadioButton>
         </StackPanel>
 
-        <StackPanel Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-            <StackPanel.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleY="0"/>
-                    <RotateTransform/>
-                    <TranslateTransform Y="0"/>
-                </TransformGroup>
-            </StackPanel.RenderTransform>
+        <ScrollViewer Grid.Row="4" Grid.ColumnSpan="2" Margin="198,0,73,0">
+            <StackPanel  HorizontalAlignment="Left" VerticalAlignment="Top" ScrollViewer.VerticalScrollBarVisibility="Auto">
 
-            <Label>Number of Cards</Label>
-            <RadioButton Name="radio1" IsChecked="True">1</RadioButton>
-            <RadioButton Name="radio2">2</RadioButton>
-            <RadioButton Name="radio3">3</RadioButton>
-            <RadioButton Name="radio4">4</RadioButton>
-            <RadioButton Name="radio5">5</RadioButton>
-            <RadioButton Name="radio6">6</RadioButton>
-            <RadioButton Name="radio7">7</RadioButton>
-            <RadioButton Name="radio8">8</RadioButton>
-            <RadioButton Name="radio9">9</RadioButton>
-            <RadioButton Name="radio10">10</RadioButton>
-        </StackPanel>
+                <Label>Number of Cards</Label>
+                <RadioButton Name="radio1" IsChecked="True">1</RadioButton>
+                <RadioButton Name="radio2">2</RadioButton>
+                <RadioButton Name="radio3">3</RadioButton>
+                <RadioButton Name="radio4">4</RadioButton>
+                <RadioButton Name="radio5">5</RadioButton>
+                <RadioButton Name="radio6">6</RadioButton>
+                <RadioButton Name="radio7">7</RadioButton>
+                <RadioButton Name="radio8">8</RadioButton>
+                <RadioButton Name="radio9">9</RadioButton>
+                <RadioButton Name="radio10">10</RadioButton>
+            </StackPanel>
+        </ScrollViewer>
 
 
 

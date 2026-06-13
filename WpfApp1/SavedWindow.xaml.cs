@@ -9,6 +9,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using Path = System.IO.Path;
 
 namespace WpfApp1
 {
@@ -20,11 +22,29 @@ namespace WpfApp1
         public SavedWindow()
         {
             InitializeComponent();
+            ConvertSavedData();
         }
 
         protected override void OnClosed(EventArgs e)
         {
             ((MainWindow)Application.Current.MainWindow).SavesOpen = false;
+        }
+
+        private void ConvertSavedData()
+        {
+            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+            string appFolderPath = Path.Combine(appDataPath, "Simple Tarot Reader");
+
+            if (!Directory.Exists(appFolderPath))
+            {
+                Directory.CreateDirectory(appFolderPath);
+            }
+
+            string filePath = Path.Combine(appFolderPath, "cards.json");
+
+            string jsonString = File.ReadAllText(filePath);
+
         }
     }
 }
