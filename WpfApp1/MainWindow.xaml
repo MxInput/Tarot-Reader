@@ -40,7 +40,7 @@
 
         <Button Foreground="White" Background="#FF2E5F6E" Grid.Row="1" Grid.ColumnSpan="1" Click="Button_Click" FontFamily="SimSun" FontSize="24" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0" >Generate</Button>
         <Button Foreground="White" Name="SaveBtn" Background="#FF2E5F6E" Grid.Row="2" Grid.ColumnSpan="1" Click="Save_Pull" FontFamily="SimSun" FontSize="24" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0">Save</Button>
-        <Button Foreground="White" Background="#FF2E5F6E" Grid.Row="3" Grid.ColumnSpan="1" Click="Open_Saves" FontFamily="SimSun" FontSize="18" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0">View Previous</Button>
+        <Button Foreground="White" Background="#FF2E5F6E" Grid.Row="3" Grid.ColumnSpan="1" Click="Open_Saves" FontFamily="SimSun" FontSize="18" FontWeight="Bold" BorderThickness="0,0,0,0" Margin="16,0,16,0">View Saves</Button>
 
         <StackPanel Grid.Row="4" Grid.Column="0" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalAlignment="Top" HorizontalAlignment="Center">
 

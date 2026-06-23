@@ -46,43 +46,52 @@ namespace WpfApp1
 
             string filePath = Path.Combine(appFolderPath, "cards.json");
 
-            string jsonString = File.ReadAllText(filePath);
-
-            var loadedEntries = System.Text.Json.JsonSerializer.Deserialize<List<SaveEntry>>(jsonString);
-
-            List<DisplayEntry> displayCards = new List<DisplayEntry>();
-
-            if (loadedEntries != null) 
-            {
-                foreach (SaveEntry foundEntry in loadedEntries)
-                {
-                    string currentCardName = "";
-                    int count = 0;
-
-                    foreach (Card foundCard in foundEntry.cards)
-                    {
-                        string reversedStatus = "Reversed";
-                        if (!foundEntry.reversals[count])
-                        {
-                            reversedStatus = "Normal";
-                        }
-
-                        if (currentCardName == "")
-                        {
-                            currentCardName += foundCard.name + " - " + reversedStatus;
-                        }
-                        else
-                        {
-                            currentCardName += ", " + foundCard.name + " - " + reversedStatus;
-                        }
-                        count++;
-                    }
-                    DisplayEntry displayEntry = new DisplayEntry(currentCardName, foundEntry.dateTime, foundEntry.label);
-                    displayCards.Add(displayEntry);
-                }
-
-                SavedCards.ItemsSource = displayCards;
+            if (!File.Exists(filePath) || new FileInfo(filePath).Length == 0)
+            { 
+                File.WriteAllText(filePath, "");
             }
+            else
+            {
+                string jsonString = File.ReadAllText(filePath);
+
+                var loadedEntries = System.Text.Json.JsonSerializer.Deserialize<List<SaveEntry>>(jsonString);
+
+                List<DisplayEntry> displayCards = new List<DisplayEntry>();
+
+                if (loadedEntries != null)
+                {
+                    foreach (SaveEntry foundEntry in loadedEntries)
+                    {
+                        string currentCardName = "";
+                        int count = 0;
+
+                        foreach (Card foundCard in foundEntry.cards)
+                        {
+                            string reversedStatus = "Reversed";
+                            if (!foundEntry.reversals[count])
+                            {
+                                reversedStatus = "Normal";
+                            }
+
+                            if (currentCardName == "")
+                            {
+                                currentCardName += foundCard.name + " - " + reversedStatus;
+                            }
+                            else
+                            {
+                                currentCardName += ", " + foundCard.name + " - " + reversedStatus;
+                            }
+                            count++;
+                        }
+                        DisplayEntry displayEntry = new DisplayEntry(currentCardName, foundEntry.dateTime, foundEntry.label);
+                        displayCards.Add(displayEntry);
+                    }
+
+                    SavedCards.ItemsSource = displayCards;
+                }
+            }
+
+            
         }
     }
 }
